@@ -12,9 +12,33 @@ namespace login
 {
     public partial class main_empleado : Form
     {
-        public main_empleado()
+        int id_emp = 0;
+        public main_empleado(int id_empleado)
         {
+            id_emp = id_empleado;
             InitializeComponent();
+            nombre_emp.Text = "Clave Unica de Empleado: " + id_emp;
+        }
+
+         private void main_empleado_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Funcion en construccion! Gracias por su espera");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

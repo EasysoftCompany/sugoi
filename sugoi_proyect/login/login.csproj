@@ -33,8 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,11 +51,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alta.Designer.cs">
+      <DependentUpon>Alta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="alta_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alta_empleado.Designer.cs">
+      <DependentUpon>alta_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bd.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_admon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main_admon.Designer.cs">
+      <DependentUpon>main_admon.cs</DependentUpon>
     </Compile>
     <Compile Include="main_empleado.cs">
       <SubType>Form</SubType>
@@ -60,8 +84,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sugoiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sugoiDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Alta.resx">
+      <DependentUpon>Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alta_empleado.resx">
+      <DependentUpon>alta_empleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_admon.resx">
+      <DependentUpon>main_admon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main_empleado.resx">
       <DependentUpon>main_empleado.cs</DependentUpon>
@@ -84,6 +122,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="sugoiDataSet.xsc">
+      <DependentUpon>sugoiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sugoiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sugoiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sugoiDataSet.xss">
+      <DependentUpon>sugoiDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

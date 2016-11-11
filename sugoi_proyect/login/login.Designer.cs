@@ -40,9 +40,10 @@
             // 
             // entrar
             // 
-            this.entrar.Location = new System.Drawing.Point(271, 167);
+            this.entrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.entrar.Location = new System.Drawing.Point(285, 433);
             this.entrar.Name = "entrar";
-            this.entrar.Size = new System.Drawing.Size(168, 23);
+            this.entrar.Size = new System.Drawing.Size(271, 30);
             this.entrar.TabIndex = 0;
             this.entrar.Text = "Entrar";
             this.entrar.UseVisualStyleBackColor = true;
@@ -50,23 +51,26 @@
             // 
             // usr
             // 
-            this.usr.Location = new System.Drawing.Point(271, 76);
+            this.usr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usr.Location = new System.Drawing.Point(388, 284);
             this.usr.Name = "usr";
-            this.usr.Size = new System.Drawing.Size(168, 20);
+            this.usr.Size = new System.Drawing.Size(245, 26);
             this.usr.TabIndex = 1;
             // 
             // pwd
             // 
-            this.pwd.Location = new System.Drawing.Point(271, 102);
+            this.pwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pwd.Location = new System.Drawing.Point(388, 337);
             this.pwd.Name = "pwd";
             this.pwd.PasswordChar = '*';
-            this.pwd.Size = new System.Drawing.Size(168, 20);
+            this.pwd.Size = new System.Drawing.Size(245, 26);
             this.pwd.TabIndex = 2;
             // 
             // candado
             // 
+            this.candado.BackColor = System.Drawing.Color.Transparent;
             this.candado.Image = ((System.Drawing.Image)(resources.GetObject("candado.Image")));
-            this.candado.Location = new System.Drawing.Point(32, 41);
+            this.candado.Location = new System.Drawing.Point(129, 241);
             this.candado.Name = "candado";
             this.candado.Size = new System.Drawing.Size(128, 149);
             this.candado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -76,9 +80,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(204, 79);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(309, 284);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Usuario";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -86,9 +92,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(204, 105);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(281, 337);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Contraseña";
             // 
@@ -97,7 +105,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(537, 234);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(784, 584);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.candado);
@@ -105,8 +114,11 @@
             this.Controls.Add(this.usr);
             this.Controls.Add(this.entrar);
             this.HelpButton = true;
+            this.MaximumSize = new System.Drawing.Size(800, 623);
+            this.MinimumSize = new System.Drawing.Size(800, 623);
             this.Name = "login";
             this.Text = "SUGOI-Login";
+            this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.candado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
