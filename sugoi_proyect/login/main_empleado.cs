@@ -12,12 +12,12 @@ namespace login
 {
     public partial class main_empleado : Form
     {
-        int id_emp = 0;
-        public main_empleado(int id_empleado)
+    
+        public main_empleado()
         {
-            id_emp = id_empleado;
+           
             InitializeComponent();
-            nombre_emp.Text = "Clave Unica de Empleado: " + id_emp;
+ 
         }
 
          private void main_empleado_Load(object sender, EventArgs e)

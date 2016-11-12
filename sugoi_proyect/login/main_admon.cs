@@ -12,12 +12,12 @@ namespace login
 {
     public partial class main_admon : Form
     {
-        int id_empleado;
-        public main_admon(int id_empleado)
+ 
+        public main_admon()
         {
-            this.id_empleado = id_empleado;
+  
             InitializeComponent();
-            nom_admon.Text = "Clave Unica de Empleado: " + id_empleado;
+            
         }
 
         private void main_admon_Load(object sender, EventArgs e)
@@ -27,14 +27,16 @@ namespace login
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Alta alt = new Alta(id_empleado);
+            Alta alt = new Alta();
             this.Hide();
             alt.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Funcion en Construccion!");
+            bajas baja = new bajas();
+            this.Hide();
+            baja.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,6 +57,11 @@ namespace login
         }
 
         private void button7_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Funcion en Construccion!");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Funcion en Construccion!");
         }

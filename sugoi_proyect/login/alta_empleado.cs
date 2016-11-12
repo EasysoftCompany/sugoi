@@ -13,10 +13,10 @@ namespace login
 {
     public partial class alta_empleado : Form
     {
-        int id_emp;
-        public alta_empleado(int id_emp)
+
+        public alta_empleado()
         {
-            this.id_emp = id_emp;
+            
             InitializeComponent();
         }
 
@@ -42,23 +42,26 @@ namespace login
 
         private void Registrar_Click(object sender, EventArgs e)
         {
-            String usr = usuario.Text;
-            String pass = contraseña.Text;
-            String name = nombre.Text;
-            String app = ap.Text;
-            String amm = am.Text;
-            String phone = tel.Text;
-            String dire = dir.Text;
-            String email = mail.Text;
-            String horas = horas_trabajo.Value.ToString();
-            String tur = turno.Text;
+            string usr = usuario.Text;
+            string pass = contraseña.Text;
+            string name = nombre.Text;
+            string app = ap.Text;
+            string amm = am.Text;
+            string phone = tel.Text;
+            string dire = dir.Text;
+            string email = mail.Text;
+            string horas = horas_trabajo.Value.ToString();
+            string tur = cbo_tur.SelectedItem.ToString();
             
 
+            if (!usr.Equals("") && !pass.Equals(""))
+            {
             MySqlCommand sql = null;
             sql = new MySqlCommand();
-
-            //Indicamos el Query a ejecutar por el commando;
-            sql.CommandText = "call sp_alta_emp('" + usr + "','" + pass + "','" + name + "','" + app + "','" + amm + "','" + phone + "','" + dire + "','" + email + "','" + horas + "','" + tur + "');";
+                try
+                {
+                    //Indicamos el Query a ejecutar por el commando;
+                    sql.CommandText = "call sp_alta_emp('" + usr + "','" + pass + "','" + name + "','" + app + "','" + amm + "','" + phone + "','" + dire + "','" + email + "','" + horas + "','" + tur + "');";
             sql.Connection = Bd.ObtenerConexion();
 
 
@@ -68,23 +71,31 @@ namespace login
 
             //Como nos interesa recuperar un valor concreto de la base de datos ejecutamos un DataReader
             consulta = sql.ExecuteReader();
-
-            while(consulta.Read())
-            {
+       
+                    while(consulta.Read())
+                    {
                 
-                MessageBox.Show(consulta.GetString(0));
-            }
+                        MessageBox.Show(consulta.GetString(0));
+                    }
 
-            Alta al = new Alta(id_emp);
-            this.Hide();
-            al.Show();
+                    Alta al = new Alta();
+                    this.Hide();
+                    al.Show();
+            }catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.ToString());
+            }
+        }
+            else
+            {
+                MessageBox.Show("El usuario y la contraseña deben tener algun valor!");
+            }
         }
 
-         
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Alta al = new Alta(id_emp);
+            Alta al = new Alta();
             this.Hide();
             al.Show();
         }

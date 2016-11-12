@@ -12,30 +12,32 @@ namespace login
 {
     public partial class Alta : Form
     {
-        int id_usr;
-        public Alta(int id_usr)
+    
+        public Alta()
         {
-            this.id_usr = id_usr;
+            
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            main_admon admon = new main_admon(id_usr);
+            main_admon admon = new main_admon();
             this.Hide();
             admon.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            alta_empleado alta_emp = new alta_empleado(id_usr);
+            alta_empleado alta_emp = new alta_empleado();
             this.Hide();
             alta_emp.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Funcion En construccion!!!");
+            alta_admon alta_admin = new alta_admon();
+            this.Hide();
+            alta_admin.Show();
         }
     }
 }

@@ -15,70 +15,80 @@ namespace login
 {
     public partial class login : Form
     {
-       
-       
+
+
 
         public login()
         {
-            
-           
+
+
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-                
+
+
 
             String uss = this.usr.Text; //Valor ingresado por el usuario en el recuadro marcado como "Usuario"
             String Pass = this.pwd.Text;
 
-            //Definimos una variable de tipo MySqlCommand Que nos servira para ejecutar Querys a la BD;
-                    
-            MySqlCommand sql = null;
-            sql = new MySqlCommand();
+            if (!uss.Equals("") && !Pass.Equals(""))
+            {
+                //Definimos una variable de tipo MySqlCommand Que nos servira para ejecutar Querys a la BD;
+                try { 
+                MySqlCommand sql = null;
+                sql = new MySqlCommand();
 
-            //Indicamos el Query a ejecutar por el commando;
-            sql.CommandText = "call sp_login('"+uss+"','"+Pass+"');";
-            sql.Connection = Bd.ObtenerConexion();
+                //Indicamos el Query a ejecutar por el commando;
+                sql.CommandText = "call sp_login('" + uss + "','" + Pass + "');";
+                sql.Connection = Bd.ObtenerConexion();
 
 
-            MySqlDataReader consulta;
+                MySqlDataReader consulta;
 
-            //Como nos interesa recuperar un valor concreto de la base de datos ejecutamos un DataReader
-            consulta = sql.ExecuteReader();
+                //Como nos interesa recuperar un valor concreto de la base de datos ejecutamos un DataReader
+                consulta = sql.ExecuteReader();
+                
+                int id_usr = 0;
+                int access;
+                while (consulta.Read())
+                {
 
-            int id_usr = 0;
-            int access;
-                while (consulta.Read()){
+                    id_usr = consulta.GetInt32(0);
+                    access = consulta.GetInt32(1);
 
-                     id_usr = consulta.GetInt32(0);
-                     access = consulta.GetInt32(1);
+                    if (access == 1)
+                    {
 
-                    if(access == 1){
-
-                        main_admon admon = new main_admon(id_usr);
+                        main_admon admon = new main_admon();
                         MessageBox.Show("Conectado con Exito como Administrador!");
                         admon.Show();
                         this.Hide();
                     }
 
-                    else{
+                    else
+                    {
 
-                        main_empleado emp = new main_empleado(id_usr);
+                        main_empleado emp = new main_empleado();
                         MessageBox.Show("Conectado con Exito como Empleado !");
                         emp.Show();
                         this.Hide();
                     }
 
                 }
-         
-            
-                if(id_usr == 0) { MessageBox.Show("Combinacion de Usuario y Contraseña Incorrectos, intente de nuevo"); }    
-                
-                
-        }
 
+
+                if (id_usr == 0) { MessageBox.Show("Combinacion de Usuario y Contraseña Incorrectos, intente de nuevo"); }
+
+                }
+                catch (Exception ex) { MessageBox.Show("ERROR: " + ex.ToString()); }
+            }
+        
+        else{
+        MessageBox.Show("El usuario y la contraseña deben tener algun valor!");
+            }
+        }
         private void label1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Usuario del sistema SUGOI");

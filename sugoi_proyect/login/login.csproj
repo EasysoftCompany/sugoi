@@ -57,11 +57,23 @@
     <Compile Include="Alta.Designer.cs">
       <DependentUpon>Alta.cs</DependentUpon>
     </Compile>
+    <Compile Include="alta_admon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alta_admon.Designer.cs">
+      <DependentUpon>alta_admon.cs</DependentUpon>
+    </Compile>
     <Compile Include="alta_empleado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="alta_empleado.Designer.cs">
       <DependentUpon>alta_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bajas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bajas.Designer.cs">
+      <DependentUpon>bajas.cs</DependentUpon>
     </Compile>
     <Compile Include="Bd.cs" />
     <Compile Include="login.cs">
@@ -92,8 +104,14 @@
     <EmbeddedResource Include="Alta.resx">
       <DependentUpon>Alta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="alta_admon.resx">
+      <DependentUpon>alta_admon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="alta_empleado.resx">
       <DependentUpon>alta_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bajas.resx">
+      <DependentUpon>bajas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

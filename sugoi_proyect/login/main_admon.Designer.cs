@@ -43,7 +43,7 @@
             this.nom_admon.AutoSize = true;
             this.nom_admon.Location = new System.Drawing.Point(61, 35);
             this.nom_admon.Name = "nom_admon";
-            this.nom_admon.Size = new System.Drawing.Size(0, 16);
+            this.nom_admon.Size = new System.Drawing.Size(0, 20);
             this.nom_admon.TabIndex = 0;
             // 
             // button1
@@ -125,6 +125,7 @@
             this.button5.TabIndex = 5;
             this.button5.Text = "Consultas";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -144,11 +145,11 @@
             // 
             // main_admon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(784, 584);
+            this.ClientSize = new System.Drawing.Size(782, 576);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
