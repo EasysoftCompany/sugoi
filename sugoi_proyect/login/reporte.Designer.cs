@@ -99,11 +99,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(991, 713);
+            this.ControlBox = false;
             this.Controls.Add(this.button2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nombre_pdf);
             this.Controls.Add(this.button1);
+            this.MaximumSize = new System.Drawing.Size(1009, 760);
+            this.MinimumSize = new System.Drawing.Size(1009, 760);
             this.Name = "reporte";
             this.Text = "reporte";
             this.ResumeLayout(false);

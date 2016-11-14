@@ -85,6 +85,12 @@
     <Compile Include="cambios.Designer.cs">
       <DependentUpon>cambios.cs</DependentUpon>
     </Compile>
+    <Compile Include="cambio_contrasena_emp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cambio_contrasena_emp.Designer.cs">
+      <DependentUpon>cambio_contrasena_emp.cs</DependentUpon>
+    </Compile>
     <Compile Include="consultas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,12 @@
     </Compile>
     <Compile Include="main_empleado.Designer.cs">
       <DependentUpon>main_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="misdatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="misdatos.Designer.cs">
+      <DependentUpon>misdatos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -137,6 +149,9 @@
     <EmbeddedResource Include="cambios.resx">
       <DependentUpon>cambios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="cambio_contrasena_emp.resx">
+      <DependentUpon>cambio_contrasena_emp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="consultas.resx">
       <DependentUpon>consultas.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="main_empleado.resx">
       <DependentUpon>main_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="misdatos.resx">
+      <DependentUpon>misdatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

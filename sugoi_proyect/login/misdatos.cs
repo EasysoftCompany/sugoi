@@ -10,22 +10,21 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 namespace login
 {
-    public partial class main_empleado : Form
+    public partial class misdatos : Form
     {
         int id_emp;
-        public main_empleado(int id_emp)
+        public misdatos(int id_emp)
         {
             this.id_emp = id_emp;
             InitializeComponent();
 
-            datos.Text = "Bienvenido(a) de nuevo ";
             try
             {
                 MySqlCommand sql = null;
                 sql = new MySqlCommand();
 
                 //Indicamos el Query a ejecutar por el commando;
-                sql.CommandText = "sp_get_user_full_name('" + id_emp+ "');";
+                sql.CommandText = "sp_mis_datos('" + id_emp+ "');";
                 sql.Connection = Bd.ObtenerConexion();
 
 
@@ -36,10 +35,14 @@ namespace login
 
                 while (consulta.Read())
                 {
-                    datos.Text += consulta.GetString(0);
-                    
+                    nom.Text = consulta.GetString(0);
+                    tel.Text = consulta.GetString(1);
+                    dir.Text = consulta.GetString(2);
+                    mail.Text = consulta.GetString(3);
+                    hrs.Text = consulta.GetString(4);
+                    turno.Text = consulta.GetString(5);
+                    antiguedad.Text = consulta.GetString(6);
                 }
-                
             }
             catch (Exception ex)
             {
@@ -47,38 +50,11 @@ namespace login
             }
         }
 
-
-    
-
-         private void main_empleado_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            cambio_contrasena_emp contra = new cambio_contrasena_emp(id_emp);
-            this.Hide();
-            contra.Show();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            login login = new login();
+            main_empleado emp = new main_empleado(id_emp);
             this.Hide();
-            login.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            misdatos misdatos = new misdatos(id_emp);
-            this.Hide();
-            misdatos.Show();
+            emp.Show();
         }
     }
 }

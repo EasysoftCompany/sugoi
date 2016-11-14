@@ -135,6 +135,7 @@
             this.regresar.TabIndex = 27;
             this.regresar.Text = "Regresar";
             this.regresar.UseVisualStyleBackColor = false;
+            this.regresar.Click += new System.EventHandler(this.regresar_Click);
             // 
             // label3
             // 
@@ -301,6 +302,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1005, 852);
+            this.ControlBox = false;
             this.Controls.Add(this.hrs);
             this.Controls.Add(this.antiguedad);
             this.Controls.Add(this.turno);
@@ -323,6 +325,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbo_usuario);
+            this.MaximumSize = new System.Drawing.Size(1023, 899);
+            this.MinimumSize = new System.Drawing.Size(1023, 899);
             this.Name = "cambios";
             this.Text = "cambios";
             ((System.ComponentModel.ISupportInitialize)(this.hrs)).EndInit();

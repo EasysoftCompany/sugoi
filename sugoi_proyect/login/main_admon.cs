@@ -41,8 +41,9 @@ namespace login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            Application.Exit();
+            login login = new login();
+            this.Hide();
+            login.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

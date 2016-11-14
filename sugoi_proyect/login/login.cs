@@ -70,7 +70,7 @@ namespace login
                     else
                     {
 
-                        main_empleado emp = new main_empleado();
+                        main_empleado emp = new main_empleado(id_usr);
                         MessageBox.Show("Conectado con Exito como Empleado !");
                         emp.Show();
                         this.Hide();
@@ -97,6 +97,12 @@ namespace login
         private void login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Application.Exit();
         }
     }
 }

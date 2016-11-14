@@ -128,5 +128,12 @@ namespace login
                     MessageBox.Show("ERROR: " + ex.ToString());
                 }
             }
+
+        private void regresar_Click(object sender, EventArgs e)
+        {
+            main_admon admon = new main_admon();
+            this.Hide();
+            admon.Show();
+        }
     }
 }

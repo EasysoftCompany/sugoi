@@ -328,6 +328,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(995, 721);
+            this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Registrar);
             this.Controls.Add(this.cbo_tur);

@@ -247,6 +247,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1007, 707);
+            this.ControlBox = false;
             this.Controls.Add(this.label13);
             this.Controls.Add(this.antiguedad);
             this.Controls.Add(this.label);
@@ -264,6 +265,8 @@
             this.Controls.Add(this.nom);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbo_usuario);
+            this.MaximumSize = new System.Drawing.Size(1025, 754);
+            this.MinimumSize = new System.Drawing.Size(1025, 754);
             this.Name = "consultas";
             this.Text = "consultas";
             this.ResumeLayout(false);
