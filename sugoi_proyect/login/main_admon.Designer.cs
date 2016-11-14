@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_admon));
-            this.nom_admon = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -37,14 +36,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // nom_admon
-            // 
-            this.nom_admon.AutoSize = true;
-            this.nom_admon.Location = new System.Drawing.Point(61, 35);
-            this.nom_admon.Name = "nom_admon";
-            this.nom_admon.Size = new System.Drawing.Size(0, 20);
-            this.nom_admon.TabIndex = 0;
             // 
             // button1
             // 
@@ -135,7 +126,7 @@
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(429, 334);
+            this.button6.Location = new System.Drawing.Point(418, 334);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(178, 54);
             this.button6.TabIndex = 6;
@@ -156,9 +147,9 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.nom_admon);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.Control;
+            this.Location = new System.Drawing.Point(500, 500);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(800, 623);
             this.MinimumSize = new System.Drawing.Size(800, 623);
@@ -166,13 +157,10 @@
             this.Text = "Menu Principal Administrador";
             this.Load += new System.EventHandler(this.main_admon_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label nom_admon;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

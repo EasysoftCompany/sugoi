@@ -47,13 +47,16 @@ namespace login
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Funcion en Construccion!");
+            cambios cam = new cambios();
+            this.Hide();
+            cam.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
-            MessageBox.Show("Funcion en Construccion!");
+            reporte rep = new reporte();
+            this.Hide();
+            rep.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -63,7 +66,10 @@ namespace login
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Funcion en Construccion!");
+            consultas con = new consultas();
+            this.Hide();
+            con.Show();
+
         }
     }
 }
